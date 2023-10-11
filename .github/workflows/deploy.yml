@@ -5,11 +5,11 @@ on:
       - main
       - dev
 env:
-  MONGODB_DB_NAME: gha-demo
-  MONGODB_PASSWORD: test
-  MONGODB_USERNAME: test
-  MONGODB_CLUSTER_ADDRESS: test
-  PORT: 8080
+  MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+  MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+  MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+  MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+  PORT: ${{ secrets.PORT }}
 jobs:
   test:
     environment: testing
